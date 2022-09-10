@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code-Authenticator</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="body">
+    
+    <p id="confirm-message">
+      You have been verified!<br />Congratulations from Dwayne Johnson
+    </p>
+
+    <p id="code"></p>
+
+    <div id="time-bar">
+      <div id="time-bar-active"></div>
+    </div>
+
+    <div id="input-parent">
+      <input id="inputCode" type="text" maxlength="5" autocomplete="off" />
+    </div>
+
+    <button id="confirm"><b>CONFIRM</b></button>
+    <button id="back"><b>BACK</b></button>
+
+    <img id="approve" src="/gif/dwayne-johnson-approved.gif" alt="" />
+    <img id="disapprove" src="/gif/dwayne-johnson-disapproved.gif" alt="" />
+
+    <script src="/script.js"></script>
+  </body>
+</html>
