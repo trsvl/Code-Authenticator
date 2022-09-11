@@ -48,7 +48,6 @@ const timeBar = () => {
   }
   timeBarActive.style.width = `${sum}%`;
   sum = sum - sec;
-  console.log(sum);
   if (sum <= -12) {
     timeBarActive.style.transition = "";
     sum = 100;
