@@ -43,8 +43,12 @@ const generateCode = () => {
 //Time bar function
 
 const timeBar = () => {
+  if (state) {
+    return;
+  }
   timeBarActive.style.width = `${sum}%`;
   sum = sum - sec;
+  console.log(sum);
   if (sum <= -12) {
     timeBarActive.style.transition = "";
     sum = 100;
@@ -67,7 +71,7 @@ body.addEventListener("keypress", (event) => {
 
 //Add/Remove DOM elements
 
-const menuState = (block, none, flex, disApp) => {
+const menuState = (block, none, flex, disApp, status) => {
   approve.style.display = block;
   confirmMessage.style.display = block;
   backBtn.style.display = block;
@@ -76,6 +80,7 @@ const menuState = (block, none, flex, disApp) => {
   timeBarParent.style.display = none;
   inputParent.style.display = flex;
   disapprove.style.display = disApp;
+  state = status;
 };
 
 //Changing color when pressing a buttons
@@ -85,14 +90,12 @@ const colorTextBtn = (element, color) => {
 };
 
 const ResultOrError = () => {
-  colorTextBtn(confirmBtn, "#282828");
-  setTimeout(() => {
-    colorTextBtn(confirmBtn, "");
-  }, 100);
-  if ((inputCode.value).toUpperCase() == pCode.textContent) {
-    menuState("block", "none", "none", "none");
-    state = true;
-    generateCode();
+  if (inputCode.value.toUpperCase() == pCode.textContent) {
+    menuState("block", "none", "none", "none", true);
+    backBtn.disabled = true;
+    setTimeout(() => {
+      backBtn.disabled = false;
+    }, 1000);
   } else {
     if (disapprove.style.display == "block") {
       return;
@@ -104,13 +107,17 @@ const ResultOrError = () => {
       }, 1200);
     }, 500);
   }
+  colorTextBtn(confirmBtn, "#282828");
+  setTimeout(() => {
+    colorTextBtn(confirmBtn, "");
+  }, 100);
 };
 
 //Generate starting menu
 
 const startingMenu = () => {
-  state = false;
-  menuState("none", "block", "flex", "none");
+  sum = 100;
+  menuState("none", "block", "flex", "none", false);
   generateCode();
 };
 
