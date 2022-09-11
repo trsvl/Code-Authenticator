@@ -89,7 +89,7 @@ const ResultOrError = () => {
   setTimeout(() => {
     colorTextBtn(confirmBtn, "");
   }, 100);
-  if (inputCode.value == pCode.textContent) {
+  if ((inputCode.value).toUpperCase() == pCode.textContent) {
     menuState("block", "none", "none", "none");
     state = true;
     generateCode();
