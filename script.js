@@ -11,7 +11,7 @@ const timeBarActive = document.querySelector("#time-bar-active");
 const timeBarParent = document.querySelector("#time-bar");
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
-const sec = 100 / 14;
+const sec = (100 / 14).toFixed(1);
 let sum = 100;
 let state = false;
 
@@ -45,7 +45,7 @@ const generateCode = () => {
 const timeBar = () => {
   timeBarActive.style.width = `${sum}%`;
   sum = sum - sec;
-  if (sum <= -14) {
+  if (sum <= -12) {
     timeBarActive.style.transition = "";
     sum = 100;
     generateCode();
