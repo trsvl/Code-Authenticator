@@ -9,7 +9,7 @@ git clone https://github.com/trsvl/Code-Authenticator
 ```
 Next, go to the folder and install the packages used in this project:
 ```
-cd TicTacToe_JS
+cd Code-Authenticator
 npm install
 ```
 To run the project, write in the console:
