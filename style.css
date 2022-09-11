@@ -45,6 +45,7 @@ body {
   );
 }
 input {
+  text-transform: uppercase;
   background: #282828;
   text-align: center;
   width: 250px;
