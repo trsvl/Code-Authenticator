@@ -1,5 +1,5 @@
 # Code-Authenticator with Dwayne Johnson
-![image](https://user-images.githubusercontent.com/69712928/189503811-29d25cfc-7794-4f02-9052-424c38910942.png)
+![image](https://imgur.com/a/zNKG7U4)
 
 # Installation
 To get started, first clone the repository on your device using the command below:
